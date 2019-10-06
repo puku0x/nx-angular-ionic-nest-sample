@@ -5,6 +5,9 @@
   "scripts": {
     "nx": "nx",
     "start": "nx serve",
+    "start:api": "nx serve api",
+    "start:web": "nx serve web",
+    "start:mobile": "nx run mobile:ionic-cordova-serve --host=0.0.0.0 --port=8100 --cordova-mock --consolelogs --consolelogs-port=53703",
     "build": "nx build",
     "test": "nx test",
     "lint": "nx workspace-lint && nx lint",
