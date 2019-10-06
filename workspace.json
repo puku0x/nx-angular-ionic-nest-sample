@@ -281,7 +281,31 @@
           "options": {
             "browserTarget": "mobile:build",
             "port": 8100,
-            "proxyConfig": "apps/web/proxy.conf.json"
+            "proxyConfig": "apps/mobile/proxy.conf.json"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "mobile:build:production"
+            }
+          }
+        },
+        "ionic-cordova-serve": {
+          "builder": "@ionic/angular-toolkit:cordova-serve",
+          "options": {
+            "cordovaBuildTarget": "mobile:ionic-cordova-build",
+            "devServerTarget": "mobile:serve"
+          },
+          "configurations": {
+            "production": {
+              "cordovaBuildTarget": "mobile:ionic-cordova-build:production",
+              "devServerTarget": "mobile:serve:production"
+            }
+          }
+        },
+        "ionic-cordova-build": {
+          "builder": "@ionic/angular-toolkit:cordova-build",
+          "options": {
+            "browserTarget": "mobile:build"
           },
           "configurations": {
             "production": {
@@ -396,6 +420,12 @@
     },
     "@nrwl/angular:library": {
       "unitTestRunner": "jest"
+    },
+    "@ionic/angular-toolkit:component": {
+      "styleext": "scss"
+    },
+    "@ionic/angular-toolkit:page": {
+      "styleext": "scss"
     }
   },
   "defaultProject": "api"
