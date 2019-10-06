@@ -15,7 +15,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@workspace/data": ["libs/data/src/index.ts"],
+      "@workspace/data/testing": ["libs/data/src/testing/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
