@@ -10,6 +10,12 @@
   "projects": {
     "api": {
       "tags": []
+    },
+    "web-e2e": {
+      "tags": []
+    },
+    "web": {
+      "tags": []
     }
   }
 }
